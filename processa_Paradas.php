@@ -19,24 +19,21 @@ session_start();
     //var_dump($valor);
 
     //Recebe os dados do arquivo em cada posição de Virgula(,)
-    $route_id = $valor[0];
-    $agency_id = $valor[1];
-    $route_short_name = $valor[2];
-    $route_long_name = $valor[3];
-    $route_desc = $valor[4];
-    $route_type = $valor[5];
-    $route_url = $valor[6];
-    $route_color = $valor[7];
-    $route_text_color = $valor[8];
+    $stop_id = $valor[0];
+    $stop_code = $valor[1];
+    $stop_name = $valor[2];
+    $stop_desc = $valor[3];
+    $stop_lat = $valor[4];
+    $stop_lon = $valor[5];
+
 
 
     //faz a inserção no BD
   //  $result_usuario = "INSERT INTO usuarios (nome,dados,tipo,numero) VALUES ('$nome', '$dados', '$tipo', '$numero')";
     //Aplica os resultados recebidos no banco
-    $resultado_usuario = $pdo->query("INSERT INTO routes (route_id,agency_id,route_short_name,route_long_name,
-    route_desc,route_type,route_url, route_color,route_text_color) VALUES (
-      '$route_id', '$agency_id', '$route_short_name', '$route_long_name', '$route_desc', '$route_type',
-      '$route_url', '$route_color', '$route_text_color')");
+    $resultado_usuarioParada = $pdo->query("INSERT INTO stops (stop_id,stop_code,stop_name,stop_desc,
+    stop_lat,stop_lon) VALUES (
+      '$stop_id', '$stop_code', '$stop_name', '$stop_desc', '$stop_lat', '$stop_lon')");
 
   }
 
