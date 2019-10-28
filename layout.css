@@ -1,0 +1,27 @@
+.centro {
+  background: white;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+//  overflow: auto;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
