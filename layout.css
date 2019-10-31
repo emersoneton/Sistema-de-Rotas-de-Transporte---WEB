@@ -11,6 +11,25 @@
 //  overflow: auto;
 }
 
+.cor{
+  background: #777;
+  color: white;
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  resize: both;
+//  overflow: auto;
+}
+
+.cor2{
+  background: #999;
+  color: white;
+}
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
