@@ -7,46 +7,32 @@
   <body>
 
 
-    <!-- BARRA SUPERIOR E PESQUISA -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Login</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <!--  <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>  -->
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
+    <nav class="navbar navbar-light  alert-secondary">
+      <div class="row">
+        <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Consulta
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="#">
+        <form class="" action="importacao.php" method="post">
+        <button type="submit" class="btn btn-secondary btn-sm">
+          IMPORTAÇÃO
+        </button>
+      </form>
+    </a>
+    </div>
   </div>
+
+        <form class="" action="login.php" method="post">
+          <input class="margem-redes" width="50" height="50" type="image" src="Imagens/login.png"  class="botao" value="Login">
+        </form>
+      </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
 </nav>
-
-    <form class="" action="login.php" method="post">
-      <input type="submit" name="" value="Login">
-    </form>
-
-
-    <form class="" action="importacao.php" method="post">
-      <input type="submit" name="" value="TESTE">
-    </form>
-
-    <form class="" action="rotas.php" method="post">
-      <input type="submit" value="Enviar">
-    </form>
 
 
 

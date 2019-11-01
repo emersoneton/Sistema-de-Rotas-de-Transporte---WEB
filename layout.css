@@ -25,6 +25,11 @@
 //  overflow: auto;
 }
 
+.pesquisa{
+  justify-content: right;
+  align-items: right;
+}
+
 .cor2{
   background: #999;
   color: white;

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Signin Template · Bootstrap</title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="layout.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
@@ -23,8 +23,19 @@
   </head>
   <body class="text-center">
     <div class="centro">
-    <form class="form-signin" method="post" action="Cadastra_Usuario.php">
+
+
+    <form class="form-signin" method="post" action="valida.php">
       <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <p class="text-center text-danger">
+        <?php
+          if (isset($_SESSION['loginErro'])) {
+            echo $_SESSION['loginErro'];
+            unset($_SESSION['loginErro']);
+          }
+         ?>
+      </p>
+      
       <?php
 
         if (isset($_SESSION['msg'])) {
@@ -33,6 +44,8 @@
         }
 
        ?>
+
+
       <h1 class="h3 mb-3 font-weight-normal">Por favor, inscreva-se!</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email" required autofocus>
@@ -46,24 +59,10 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
     </form>
 
-
-    <p class="text-center text-danger">
-      <?php
-        if (isset($_SESSION['loginErro'])) {
-          echo $_SESSION['loginErro'];
-          unset($_SESSION['loginErro']);
-        }
-       ?>
-    </p>
-
     </div>
 
     <form class="" action="cadastro.php" method="post">
       <button class="btn btn-lg btn-secundary btn-block" type="submit">Cadastre-se</button>
-    </form>
-
-    <form class="" action="valida.php" method="post">
-      <input type="submit" name="" value="busca">
     </form>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

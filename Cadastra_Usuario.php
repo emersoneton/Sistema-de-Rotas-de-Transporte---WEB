@@ -19,10 +19,17 @@ session_start();
     echo $senha;
 
     //Aplica os resultados recebidos no banco
-  /*  $resultado_usuarioParada = $pdo->query("INSERT INTO usuario (email,senha) VALUES (
-      '$email', '$senha')");
+  //  $resultado_usuarioParada = $pdo->query("INSERT INTO usuario (email,senha,) VALUES (
+  //    '$email', '$senha')");
+
+      $SQL = "INSERT INTO usuario (email,senha,endereco,numero,cep,rg,cpf,cidade,estado) VALUES ('$email', '$senha',
+      '$endereco', '$numero', '$cep', '$rg', '$cpf', '$cidade', '$estado');";
+
+       $stmt = $pdo->prepare($SQL);
+
+       $stmt->execute($valor);
 
 
-  $_SESSION['msg'] = "<p style='color: green;'>Usuario Cadastrado com Sucesso!</p>";
-  header("location: login.php"); */
+  $_SESSION['msg'] = "<p style='color: red;'><b>USUARIO CADASTRADO, PODE FAZER LOGIN!</b></p>";
+  header("location: login.php");
  ?>
