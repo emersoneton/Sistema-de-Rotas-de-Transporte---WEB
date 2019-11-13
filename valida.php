@@ -22,19 +22,11 @@
      $_SESSION['loginErro'] = "Usuario ou Senha inválido!";
      header("Location: login.php");
 
+   } else {
+     session_start();
+     $_SESSION['email'] = $email;
+     $_SESSION['senha'] = $senha;
+     header("Location: index0.php");
    }
 
-
-
-//   header("Location: login.html");
-
-/*    if ((isset($_POST['email'])) && ((isset($_POST['senha']))) {
-
-
-
-    }else{
-      $_SESSION['loginErro'] = "Usuario ou Senha inválido!";
-      header("Location: login.html")
-    }
-*/
  ?>

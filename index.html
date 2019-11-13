@@ -3,38 +3,28 @@
     <meta charset="utf-8">
     <title>Sistema de Transporte</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="consulta.js"></script>
   </head>
   <body>
-
-
-    <nav class="navbar navbar-light  alert-secondary">
-      <div class="row">
-        <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Consulta
-    </button>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <a class="dropdown-item" href="#">
-        <form class="" action="importacao.php" method="post">
-        <button type="submit" class="btn btn-secondary btn-sm">
-          IMPORTAÇÃO
-        </button>
-      </form>
-    </a>
-    </div>
-  </div>
-
-        <form class="" action="login.php" method="post">
-          <input class="margem-redes" width="50" height="50" type="image" src="Imagens/login.png"  class="botao" value="Login">
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <form class="" action="login.php" method="post">
+            <li class="nav-item active">
+              <button type="submit" class="btn btn-secondary btn-sm">
+                LOGIN
+              </button>
+            </li>
+          </form>
+          <form class="" action="importacao.php" method="post">
+          </form>
+        </ul>
       </div>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
-
-
+    </nav>
+  <br><br><br>
 
 <!-- Scripts do bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
