@@ -2,11 +2,14 @@
 
   session_start();
   if (isset($_SESSION['email']) != ($_SESSION['senha'])) {
+    session_destroy();
+    header("Location: login.php");
+  }else if (isset($_SESSION['']) == ($_SESSION[''])) {
+    session_destroy();
     header("Location: login.php");
   }
 
 ?>
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -48,38 +51,36 @@
     </nav>
   <br><br><br>
 
-<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
 
+<div class="container col-md-8 order-md-1">
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
           <form class=""  action=""  method="get">
             <div class="input-group mb-1">
-              <input type="text" required name="busca" class="form-control" id="onibus" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <input type="text" required name="busca" class="form-control" id="onibus" placeholder="Nome do Onibus" aria-label="Recipient's username" aria-describedby="button-addon2">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="submit" id="1213">Pesquisar</button>
               </div>
             </div>
           </form>
           <br>
-          <div class="input-group mb-1">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">pesq</button>
+          <form class="" action="" method="get">
+            <div class="input-group mb-1">
+              <input type="text" class="form-control" required name="busca_paradas" placeholder="Nome da Parada" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
+              </div>
             </div>
-          </div>
+          </form>
           <br>
-          <div class="input-group mb-1">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
+
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
@@ -87,29 +88,55 @@
         <!--  <input type="text" name="" value="<?php if(isset($_GET["busca"])){ echo $_GET['busca']; }?>"> -->
           <div>
             <?php
+              include_once("conexao.php");
 
               if(isset($_GET["busca"])){
 
-                include_once("conexao.php");
+                $busca = $_GET["busca"];
 
-                $sql = "SELECT * FROM usuario";
+                $sql = "SELECT * FROM `routes` where route_long_name LIKE'%$busca%'";
 
                 $result = $pdo->query($sql);
 
                 while ($row = $result->fetch()) {
 
-                    $email = $row['email'];
-                    $senha = $row['senha'];
+                    $nome = $row['route_long_name'];
+                    $numero = $row['route_id'];
 
-                echo "EMAIL: ".$email."<br>";
-                echo "SENHA: ".$senha."<br>";
+                echo "Onibus: ".$nome."<br>";
+                echo "Número do Onibus: ".$numero."<br>";
                 echo "<br>";
                 }
             }
 
 
+            if(isset($_GET["busca_paradas"])){
+
+              $busca_paradas = $_GET["busca_paradas"];
+
+              $sql = "SELECT * FROM `stops` where stop_name LIKE'%$busca_paradas%'";
+
+              $result = $pdo->query($sql);
+
+              while ($row = $result->fetch()) {
+
+                  $id = $row['stop_id'];
+                  $nome = $row['stop_name'];
+                  $latitude = $row['stop_lat'];
+                  $longitude = $row['stop_lon'];
+
+              echo "ID: ".$id."<br>";
+              echo "Parada do Onibus: ".$nome."<br>";
+              echo "Parada Latitude: ".$latitude."<br>";
+              echo "Parada Longitude: ".$longitude."<br>";
+              echo "<br>";
+              }
+          }
+
+
               if(isset($_GET["sair"])){
                   session_destroy();
+                  header("Location: index.html");
               }
             ?>
           </div>
@@ -119,6 +146,10 @@
   </div>
 
 
+</div>
+
+
+</div>
 </div>
 <!-- Scripts do bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
