@@ -4,28 +4,31 @@
     <title>Sistema de Transporte</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="consulta.js"></script>
+    <link rel="stylesheet" href="layout.css">
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <form class="" action="login.php" method="post">
-            <li class="nav-item active">
-              <button type="submit" class="btn btn-secondary btn-sm">
-                LOGIN
-              </button>
-            </li>
-          </form>
-          <form class="" action="importacao.php" method="post">
-          </form>
-        </ul>
-      </div>
-    </nav>
+  <body style="background: #fef;">
 
-  <div class="bd-example container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#Passagens">Passagens</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#cadastro">Cadastre-se <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#empresas">Empresas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#atendimento">Suporte</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -83,7 +86,7 @@
 <div class="row container-fluid">
   <div class="col-3">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Onibus</a>
+      <a class="nav-link active" id="Passagens" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Onibus</a>
       <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Lotação</a>
     </div>
   </div>
@@ -94,13 +97,13 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <br>
           <div class="row">
-              <div class="col-lg-2 border border-dark">
+              <div class="col-lg-2 border border-dark cor_tabela">
                 VALOR
               </div>
-              <div class="col-lg-2 border border-dark">
+              <div class="col-lg-2 border border-dark cor_tabela">
                 DATA
               </div>
-              <div class="col-lg-4 border border-dark">
+              <div class="col-lg-4 border border-dark cor_tabela">
                 LOCALIZAÇÃO
               </div>
           </div>
@@ -162,13 +165,13 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <br>
           <div class="row">
-              <div class="col-lg-2 border border-dark">
+              <div class="col-lg-2 border border-dark cor_tabela">
                 VALOR
               </div>
-              <div class="col-lg-2 border border-dark">
+              <div class="col-lg-2 border border-dark cor_tabela">
                 DATA
               </div>
-              <div class="col-lg-4 border border-dark">
+              <div class="col-lg-4 border border-dark cor_tabela">
                 LOCALIZAÇÃO
               </div>
           </div>
@@ -222,12 +225,59 @@
           </div>
 
           <br><br><br>
-
-
       </div>
     </div>
   </div>
 </div>
+
+
+    <div class="layout_direita">
+      <div class="card" style="width: 18rem;">
+      <img id="cadastro" src="Imagens/rotas.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">CADASTRO GRÁTIS</h5>
+        <p class="card-text">Você gostaria de se cadastrar para visualizar todas as rotas de onibus, onibus e suas paradas de uma forma bem fácil?</p>
+        <form class="" action="login.php" method="post">
+          <button type="submit" class="btn btn-primary" name="button">CADASTRE-SE</button>
+        </form>
+      </div>
+    </div>
+    </div>
+
+
+
+    <div class="container">
+      <h2 id="empresas">Empresas Prestadores de Serviço</h2>
+      <hr/>
+      <div class="row">
+        <img src="Imagens/carris.jpg" class="rounded float-left width="80" height="80"" alt="...">
+        <img src="Imagens/soul.png" class="rounded mx-auto d-block width="100" height="100"" alt="...">
+        <img src="Imagens/citral.png" class="rounded float-right width="60" height="60"" alt="...">
+      </div>
+      <br>
+      <div class="row">
+        <img src="Imagens/central.jpg" class="rounded float-left width="100" height="100"" alt="...">
+        <img src="Imagens/turis.jpg" class="rounded mx-auto d-block width="60" height="60"" alt="...">
+        <img src="Imagens/palmares.png" class="rounded float-right width="40" height="40"" alt="...">
+        <br><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <h2 id="atendimento">Atendimento</h2>
+      <hr/>
+      <div class="">
+        <h5 style="text-align: left;">Suporte: (51) 3365-1137</h5>
+          <h5 style="text-align: center;">Duvidas: (51) 3365-1138</h5>
+            <h5 style="text-align: right;">Reclamações: (51) 3365-1139</h5>
+              <br>
+      </div>
+    </div>
+
+
+
+
 <!-- Scripts do bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

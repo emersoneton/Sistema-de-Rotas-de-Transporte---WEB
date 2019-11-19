@@ -58,11 +58,14 @@
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
     </form>
-
     </div>
 
     <form class="" action="cadastro.php" method="post">
-      <button class="btn btn-lg btn-secundary btn-block" type="submit">Cadastre-se</button>
+      <button class="btn btn-lg btn-secundary btn-block" type="submit"><h3>Cadastre-se</h3></button>
+    </form>
+
+    <form class="" action="index.html" method="post">
+      <button type="submit" class="btn btn-lg btn-secundary btn-block" name="button">Voltar</button>
     </form>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

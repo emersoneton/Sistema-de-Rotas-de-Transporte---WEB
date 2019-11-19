@@ -4,10 +4,10 @@
   if (isset($_SESSION['email']) != ($_SESSION['senha'])) {
     session_destroy();
     header("Location: login.php");
-  }else if (isset($_SESSION['']) == ($_SESSION[''])) {
+  }/*else if (isset($_SESSION['']) == ($_SESSION[''])) {
     session_destroy();
     header("Location: login.php");
-  }
+  }*/
 
 ?>
 <html lang="en" dir="ltr">

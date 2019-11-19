@@ -25,6 +25,18 @@
 //  overflow: auto;
 }
 
+.cor_tabela{
+  background: #777;
+  color: white;
+}
+
+.layout_direita{
+  margin: 0 auto;
+  padding: 50px;
+  justify-content: right;
+  align-items: right;
+}
+
 .pesquisa{
   justify-content: right;
   align-items: right;
@@ -33,6 +45,12 @@
 .cor2{
   background: #999;
   color: white;
+}
+
+.centraliza_centro{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .bd-placeholder-img {
