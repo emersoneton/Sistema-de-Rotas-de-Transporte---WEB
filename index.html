@@ -9,12 +9,15 @@
   <body style="background: #fef;">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#Passagens">Passagens</a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
+      <li>
+          <a class="navbar-brand" href="#Passagens">Passagens</a>
+      </li>
       <li class="nav-item active">
         <a class="nav-link" href="#cadastro">Cadastre-se <span class="sr-only">(current)</span></a>
       </li>
@@ -24,6 +27,12 @@
       <li class="nav-item">
         <a class="nav-link" href="#atendimento">Suporte</a>
       </li>
+      <form class="" action="login.php" method="post">
+        <li class="nav-item">
+          <button style="color: white" type="submit" class="btn btn-link"><b>LOGIN</b></button>
+        </li>
+      </form>
+
     </ul>
   </div>
 </nav>
@@ -237,7 +246,7 @@
       <div class="card-body">
         <h5 class="card-title">CADASTRO GRÁTIS</h5>
         <p class="card-text">Você gostaria de se cadastrar para visualizar todas as rotas de onibus, onibus e suas paradas de uma forma bem fácil?</p>
-        <form class="" action="login.php" method="post">
+        <form class="" action="cadastro.php" method="post">
           <button type="submit" class="btn btn-primary" name="button">CADASTRE-SE</button>
         </form>
       </div>

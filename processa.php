@@ -8,12 +8,9 @@ foreach ($arquivo as $linha) {
    echo $linha;
 
 
-
-
     $linha = trim($linha);
     $valor = explode(',', $linha);
     //var_dump($valor);
-
 
 
       $SQL = "INSERT INTO routes (route_id,agency_id,route_short_name,route_long_name,
